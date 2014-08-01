@@ -1,0 +1,98 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{6989167D-11E4-40FE-8C1A-2192A86A7E90}") = "geolib", "geolib\geolib.vfproj", "{270B9451-21BD-41F1-A126-F36C944DF8F3}"
+	ProjectSection(ProjectDependencies) = postProject
+		{67497251-E24B-498E-9803-3E68DFCA6599} = {67497251-E24B-498E-9803-3E68DFCA6599}
+	EndProjectSection
+EndProject
+Project("{6989167D-11E4-40FE-8C1A-2192A86A7E90}") = "CFReceiver", "CFReceiver\CFReceiver.vfproj", "{21EC67FD-4545-45CF-AB43-6A0FBE96525D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{67497251-E24B-498E-9803-3E68DFCA6599} = {67497251-E24B-498E-9803-3E68DFCA6599}
+		{270B9451-21BD-41F1-A126-F36C944DF8F3} = {270B9451-21BD-41F1-A126-F36C944DF8F3}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{934FD795-9926-4574-A27D-0B054E1B711F}"
+EndProject
+Project("{6989167D-11E4-40FE-8C1A-2192A86A7E90}") = "geolib_model", "geolib_model\geolib_model.vfproj", "{67497251-E24B-498E-9803-3E68DFCA6599}"
+EndProject
+Project("{6989167D-11E4-40FE-8C1A-2192A86A7E90}") = "geocore", "geocore\geocore.vfproj", "{6E53CBD0-17FA-4FAB-9D00-2B86BEC1072F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|Win32 = Debug|Win32
+		Intel_SSA|Any CPU = Intel_SSA|Any CPU
+		Intel_SSA|Mixed Platforms = Intel_SSA|Mixed Platforms
+		Intel_SSA|Win32 = Intel_SSA|Win32
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{270B9451-21BD-41F1-A126-F36C944DF8F3}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{270B9451-21BD-41F1-A126-F36C944DF8F3}.Debug|Mixed Platforms.ActiveCfg = Debug|Win32
+		{270B9451-21BD-41F1-A126-F36C944DF8F3}.Debug|Mixed Platforms.Build.0 = Debug|Win32
+		{270B9451-21BD-41F1-A126-F36C944DF8F3}.Debug|Win32.ActiveCfg = Debug|Win32
+		{270B9451-21BD-41F1-A126-F36C944DF8F3}.Debug|Win32.Build.0 = Debug|Win32
+		{270B9451-21BD-41F1-A126-F36C944DF8F3}.Intel_SSA|Any CPU.ActiveCfg = Release|Win32
+		{270B9451-21BD-41F1-A126-F36C944DF8F3}.Intel_SSA|Mixed Platforms.ActiveCfg = Release|Win32
+		{270B9451-21BD-41F1-A126-F36C944DF8F3}.Intel_SSA|Mixed Platforms.Build.0 = Release|Win32
+		{270B9451-21BD-41F1-A126-F36C944DF8F3}.Intel_SSA|Win32.ActiveCfg = Release|Win32
+		{270B9451-21BD-41F1-A126-F36C944DF8F3}.Intel_SSA|Win32.Build.0 = Release|Win32
+		{270B9451-21BD-41F1-A126-F36C944DF8F3}.Release|Any CPU.ActiveCfg = Release|Win32
+		{270B9451-21BD-41F1-A126-F36C944DF8F3}.Release|Mixed Platforms.ActiveCfg = Release|Win32
+		{270B9451-21BD-41F1-A126-F36C944DF8F3}.Release|Mixed Platforms.Build.0 = Release|Win32
+		{270B9451-21BD-41F1-A126-F36C944DF8F3}.Release|Win32.ActiveCfg = Release|Win32
+		{270B9451-21BD-41F1-A126-F36C944DF8F3}.Release|Win32.Build.0 = Release|Win32
+		{21EC67FD-4545-45CF-AB43-6A0FBE96525D}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{21EC67FD-4545-45CF-AB43-6A0FBE96525D}.Debug|Mixed Platforms.ActiveCfg = Debug|Win32
+		{21EC67FD-4545-45CF-AB43-6A0FBE96525D}.Debug|Mixed Platforms.Build.0 = Debug|Win32
+		{21EC67FD-4545-45CF-AB43-6A0FBE96525D}.Debug|Win32.ActiveCfg = Debug|Win32
+		{21EC67FD-4545-45CF-AB43-6A0FBE96525D}.Debug|Win32.Build.0 = Debug|Win32
+		{21EC67FD-4545-45CF-AB43-6A0FBE96525D}.Intel_SSA|Any CPU.ActiveCfg = Intel_SSA|Win32
+		{21EC67FD-4545-45CF-AB43-6A0FBE96525D}.Intel_SSA|Mixed Platforms.ActiveCfg = Intel_SSA|Win32
+		{21EC67FD-4545-45CF-AB43-6A0FBE96525D}.Intel_SSA|Mixed Platforms.Build.0 = Intel_SSA|Win32
+		{21EC67FD-4545-45CF-AB43-6A0FBE96525D}.Intel_SSA|Win32.ActiveCfg = Intel_SSA|Win32
+		{21EC67FD-4545-45CF-AB43-6A0FBE96525D}.Intel_SSA|Win32.Build.0 = Intel_SSA|Win32
+		{21EC67FD-4545-45CF-AB43-6A0FBE96525D}.Release|Any CPU.ActiveCfg = Release|Win32
+		{21EC67FD-4545-45CF-AB43-6A0FBE96525D}.Release|Mixed Platforms.ActiveCfg = Release|Win32
+		{21EC67FD-4545-45CF-AB43-6A0FBE96525D}.Release|Mixed Platforms.Build.0 = Release|Win32
+		{21EC67FD-4545-45CF-AB43-6A0FBE96525D}.Release|Win32.ActiveCfg = Release|Win32
+		{21EC67FD-4545-45CF-AB43-6A0FBE96525D}.Release|Win32.Build.0 = Release|Win32
+		{67497251-E24B-498E-9803-3E68DFCA6599}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{67497251-E24B-498E-9803-3E68DFCA6599}.Debug|Mixed Platforms.ActiveCfg = Debug|Win32
+		{67497251-E24B-498E-9803-3E68DFCA6599}.Debug|Mixed Platforms.Build.0 = Debug|Win32
+		{67497251-E24B-498E-9803-3E68DFCA6599}.Debug|Win32.ActiveCfg = Debug|Win32
+		{67497251-E24B-498E-9803-3E68DFCA6599}.Debug|Win32.Build.0 = Debug|Win32
+		{67497251-E24B-498E-9803-3E68DFCA6599}.Intel_SSA|Any CPU.ActiveCfg = Release|Win32
+		{67497251-E24B-498E-9803-3E68DFCA6599}.Intel_SSA|Mixed Platforms.ActiveCfg = Release|Win32
+		{67497251-E24B-498E-9803-3E68DFCA6599}.Intel_SSA|Mixed Platforms.Build.0 = Release|Win32
+		{67497251-E24B-498E-9803-3E68DFCA6599}.Intel_SSA|Win32.ActiveCfg = Release|Win32
+		{67497251-E24B-498E-9803-3E68DFCA6599}.Intel_SSA|Win32.Build.0 = Release|Win32
+		{67497251-E24B-498E-9803-3E68DFCA6599}.Release|Any CPU.ActiveCfg = Release|Win32
+		{67497251-E24B-498E-9803-3E68DFCA6599}.Release|Mixed Platforms.ActiveCfg = Release|Win32
+		{67497251-E24B-498E-9803-3E68DFCA6599}.Release|Mixed Platforms.Build.0 = Release|Win32
+		{67497251-E24B-498E-9803-3E68DFCA6599}.Release|Win32.ActiveCfg = Release|Win32
+		{67497251-E24B-498E-9803-3E68DFCA6599}.Release|Win32.Build.0 = Release|Win32
+		{6E53CBD0-17FA-4FAB-9D00-2B86BEC1072F}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{6E53CBD0-17FA-4FAB-9D00-2B86BEC1072F}.Debug|Mixed Platforms.ActiveCfg = Debug|Win32
+		{6E53CBD0-17FA-4FAB-9D00-2B86BEC1072F}.Debug|Mixed Platforms.Build.0 = Debug|Win32
+		{6E53CBD0-17FA-4FAB-9D00-2B86BEC1072F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{6E53CBD0-17FA-4FAB-9D00-2B86BEC1072F}.Debug|Win32.Build.0 = Debug|Win32
+		{6E53CBD0-17FA-4FAB-9D00-2B86BEC1072F}.Intel_SSA|Any CPU.ActiveCfg = Release|Win32
+		{6E53CBD0-17FA-4FAB-9D00-2B86BEC1072F}.Intel_SSA|Mixed Platforms.ActiveCfg = Release|Win32
+		{6E53CBD0-17FA-4FAB-9D00-2B86BEC1072F}.Intel_SSA|Mixed Platforms.Build.0 = Release|Win32
+		{6E53CBD0-17FA-4FAB-9D00-2B86BEC1072F}.Intel_SSA|Win32.ActiveCfg = Release|Win32
+		{6E53CBD0-17FA-4FAB-9D00-2B86BEC1072F}.Intel_SSA|Win32.Build.0 = Release|Win32
+		{6E53CBD0-17FA-4FAB-9D00-2B86BEC1072F}.Release|Any CPU.ActiveCfg = Release|Win32
+		{6E53CBD0-17FA-4FAB-9D00-2B86BEC1072F}.Release|Mixed Platforms.ActiveCfg = Release|Win32
+		{6E53CBD0-17FA-4FAB-9D00-2B86BEC1072F}.Release|Mixed Platforms.Build.0 = Release|Win32
+		{6E53CBD0-17FA-4FAB-9D00-2B86BEC1072F}.Release|Win32.ActiveCfg = Release|Win32
+		{6E53CBD0-17FA-4FAB-9D00-2B86BEC1072F}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

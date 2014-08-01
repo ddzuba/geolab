@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VisualStudioProject ProjectCreator="Intel Fortran" Keyword="Win32 Application" Version="11.0" ProjectIdGuid="{21EC67FD-4545-45CF-AB43-6A0FBE96525D}">
+	<Platforms>
+		<Platform Name="Win32"/></Platforms>
+	<Configurations>
+		<Configuration Name="Debug|Win32">
+				<Tool Name="VFFortranCompilerTool" SuppressStartupBanner="true" DebugInformationFormat="debugEnabled" Optimization="optimizeDisabled" WarnInterfaces="true" Traceback="true" BoundsCheck="true" RuntimeLibrary="rtMultiThreadedDebug" UseWindowsLibs="true"/>
+				<Tool Name="VFLinkerTool" LinkIncremental="linkIncrementalNo" SuppressStartupBanner="true" GenerateDebugInformation="true" SubSystem="subSystemWindows" AdditionalDependencies="advapi32.lib ws2_32.lib ..\geolib\Debug\geolib.lib"/>
+				<Tool Name="VFResourceCompilerTool"/>
+				<Tool Name="VFMidlTool" SuppressStartupBanner="true" HeaderFileName="$(InputName).h"/>
+				<Tool Name="VFCustomBuildTool"/>
+				<Tool Name="VFPreLinkEventTool"/>
+				<Tool Name="VFPreBuildEventTool" CommandLine="del geolib.dll" Description="Removing current geolib.dll"/>
+				<Tool Name="VFPostBuildEventTool" CommandLine="copy &quot;..\geolib\Debug\geolib.dll&quot; &quot;.\geolib.dll&quot;" Description="Copy geolib.dll from DEBUG folder to the project"/>
+				<Tool Name="VFManifestTool" SuppressStartupBanner="true"/></Configuration>
+		<Configuration Name="Release|Win32">
+				<Tool Name="VFFortranCompilerTool" SuppressStartupBanner="true" UseWindowsLibs="true"/>
+				<Tool Name="VFLinkerTool" LinkIncremental="linkIncrementalNo" SuppressStartupBanner="true" SubSystem="subSystemWindows" AdditionalDependencies="advapi32.lib ws2_32.lib ..\geolib\Debug\geolib.lib"/>
+				<Tool Name="VFResourceCompilerTool"/>
+				<Tool Name="VFMidlTool" SuppressStartupBanner="true" HeaderFileName="$(InputName).h"/>
+				<Tool Name="VFCustomBuildTool"/>
+				<Tool Name="VFPreLinkEventTool"/>
+				<Tool Name="VFPreBuildEventTool" CommandLine="del geolib.dll" Description="Removing current geolib.dll"/>
+				<Tool Name="VFPostBuildEventTool" CommandLine="copy &quot;..\geolib\Release\geolib.dll&quot; &quot;.\geolib.dll&quot;" Description="Copy geolib.dll from DEBUG folder to the project"/>
+				<Tool Name="VFManifestTool" SuppressStartupBanner="true"/></Configuration>
+		<Configuration Name="Intel_SSA|Win32">
+				<Tool Name="VFFortranCompilerTool" SuppressStartupBanner="true" DebugInformationFormat="debugEnabled" Optimization="optimizeDisabled" SV_DiagLevel="svDiagLevel3" WarnInterfaces="true" Traceback="true" BoundsCheck="true" RuntimeLibrary="rtMultiThreadedDebug" UseWindowsLibs="true" ModeOfStaticAnalysis="svDiagModeFull"/>
+				<Tool Name="VFLinkerTool" LinkIncremental="linkIncrementalNo" SuppressStartupBanner="true" GenerateDebugInformation="true" SubSystem="subSystemWindows" AdditionalDependencies="advapi32.lib ws2_32.lib ..\geolib\Debug\geolib.lib"/>
+				<Tool Name="VFResourceCompilerTool"/>
+				<Tool Name="VFMidlTool" SuppressStartupBanner="true" HeaderFileName="$(InputName).h"/>
+				<Tool Name="VFCustomBuildTool"/>
+				<Tool Name="VFPreLinkEventTool"/>
+				<Tool Name="VFPreBuildEventTool" CommandLine="del geolib.dll" Description="Removing current geolib.dll"/>
+				<Tool Name="VFPostBuildEventTool" CommandLine="copy &quot;..\geolib\Debug\geolib.dll&quot; &quot;.\geolib.dll&quot;" Description="Copy geolib.dll from DEBUG folder to the project"/>
+				<Tool Name="VFManifestTool" SuppressStartupBanner="true"/></Configuration></Configurations>
+	<Files>
+		<Filter Name="Header Files" Filter="fi;fd">
+		<File RelativePath=".\CFReceiver.fi"/></Filter>
+		<Filter Name="Resource Files" Filter="rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe">
+		<File RelativePath=".\CFReceiver.ico"/>
+		<File RelativePath=".\CFReceiver.rc"/></Filter>
+		<Filter Name="Source Files" Filter="f90;for;f;fpp;ftn;def;odl;idl">
+		<File RelativePath=".\CFReceiver.f90"/>
+		<File RelativePath=".\CFReceiverGlobals.f90"/>
+		<File RelativePath=".\Coordinatory.f90"/>
+		<File RelativePath=".\File_name.f90"/>
+		<File RelativePath=".\GeoScan_Integral.f90"/>
+		<File RelativePath=".\GeoScan_modules.f90"/>
+		<File RelativePath=".\GeoSckan_Input.f90"/>
+		<File RelativePath=".\Ini_Read.f90"/>
+		<File RelativePath=".\Koordinata_File.f90"/>
+		<File RelativePath=".\Only_File.f90"/>
+		<File RelativePath=".\Otn_rasst.f90"/>
+		<File RelativePath=".\Razm1.f90"/>
+		<File RelativePath=".\Rdd_3chen.f90"/>
+		<File RelativePath=".\Redactor_log.f90"/>
+		<File RelativePath=".\Redactor_Txt.f90"/>
+		<File RelativePath=".\RunProcess1.f90"/>
+		<File RelativePath=".\Rw_Koordinata_File.f90"/>
+		<File RelativePath=".\SendTraceRealTime.f90"/>
+		<File RelativePath=".\Tab.f90"/>
+		<File RelativePath=".\Time_.f90"/>
+		<File RelativePath=".\Time_trassa.f90"/>
+		<File RelativePath=".\win1251_utf.f90"/></Filter>
+		<File RelativePath=".\allocateble_arrays.docx"/>
+		<File RelativePath=".\Cfreceiver.cfg"/>
+		<File RelativePath=".\geolib.ini"/>
+		<File RelativePath=".\Instruction.txt"/>
+		<File RelativePath=".\ReadMe.txt"/>
+		<File RelativePath=".\Resource.h">
+			<FileConfiguration Name="Debug|Win32">
+				<Tool Name="VFCustomBuildTool" CommandLine="deftofd &quot;$(InputPath)&quot; &quot;$(InputDir)$(InputName).fd&quot;" Description="Generating Fortran include file..." Outputs="$(InputDir)$(InputName).fd"/></FileConfiguration>
+			<FileConfiguration Name="Intel_SSA|Win32">
+				<Tool Name="VFCustomBuildTool" CommandLine="deftofd &quot;$(InputPath)&quot; &quot;$(InputDir)$(InputName).fd&quot;" Description="Generating Fortran include file..." Outputs="$(InputDir)$(InputName).fd"/></FileConfiguration>
+			<FileConfiguration Name="Release|Win32">
+				<Tool Name="VFCustomBuildTool" CommandLine="deftofd &quot;$(InputPath)&quot; &quot;$(InputDir)$(InputName).fd&quot;" Description="Generating Fortran include file..." Outputs="$(InputDir)$(InputName).fd"/></FileConfiguration></File></Files>
+	<Globals/></VisualStudioProject>

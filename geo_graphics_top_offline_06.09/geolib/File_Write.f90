@@ -1,0 +1,164 @@
+!------------------------------------------------------------------------------------------
+! ДИАЛОГ ОТКРЫТИЯ ФАЙЛОВ ДАННЫХ И РЕЗУЛЬТАТОВ ДЛЯ ЗАПИСИ .BMP - ФАЙЛОВ
+!------------------------------------------------------------------------------------------
+	SUBROUTINE FILE_WRITE() 
+	USE PARAM_
+	USE FReciverGlobals
+	USE PARAM_1
+	use GeolibGlobals
+	IMPLICIT NONE
+	EXTERNAL INFILES
+
+	FLAG=DLGINITWITHRESOURCEHANDLE(FILES_BMP, dllHandler, PARAMETR2) ! ИНИЦИАЛИЗАЦИЯ ДИАЛОГА
+
+	!DISK='C:'
+	PAPKA=NAME_FILE_IMG
+	FILE='km_m_km_m_chen.bmp'
+	FILE_TEXT='MOUSE'
+	IFLAG_PRINT=0				! ОТСУТСТВИЕ ПЕЧАТИ	
+	N_PRINT=1									! ШАГ ВЫДАЧИ ТРАСС НА МОНИТОР
+	FLAG=DLGSET(PARAMETR2,ERROR_FILE,'')                ! инициализация поля
+	WRITE(STRING,*)	DISK	
+	FLAG=DLGSET(PARAMETR2,F1,adjustl(STRING))	! инициализация поля
+	WRITE(STRING,*)	PAPKA	
+	FLAG=DLGSET(PARAMETR2,F2,adjustl(STRING))	! инициализация поля
+	WRITE(STRING,*)	FILE	
+	FLAG=DLGSET(PARAMETR2,F3,adjustl(STRING))	! инициализация поля
+	WRITE(STRING,*)	FILE_TEXT	
+	FLAG=DLGSET(PARAMETR2,F4,adjustl(STRING))	! инициализация поля
+	WRITE(STRING,*)	IFLAG_PRINT	
+	FLAG=DLGSET(PARAMETR2,F6,adjustl(STRING))	! инициализация поля
+	WRITE(STRING,*)	N_PRINT	
+	FLAG=DLGSET(PARAMETR2,F7,adjustl(STRING))	! инициализация поля
+	WRITE(STRING,*)	img_w	
+	FLAG=DLGSET(PARAMETR2,F8,adjustl(STRING))	! инициализация поля
+	WRITE(STRING,*)	img_h	
+	FLAG=DLGSET(PARAMETR2,F9,adjustl(STRING))	! инициализация поля
+
+	FLAG=DLGSETSUB(PARAMETR2,F1,INFILES)
+	FLAG=DLGSETSUB(PARAMETR2,F2,INFILES)
+	FLAG=DLGSETSUB(PARAMETR2,F3,INFILES)
+	FLAG=DLGSETSUB(PARAMETR2,F4,INFILES)
+	FLAG=DLGSETSUB(PARAMETR2,F6,INFILES)
+	FLAG=DLGSETSUB(PARAMETR2,F7,INFILES)
+	FLAG=DLGSETSUB(PARAMETR2,F8,INFILES)
+	FLAG=DLGSETSUB(PARAMETR2,F9,INFILES)
+
+	FLAG=DLGSETSUB(PARAMETR2,YES,INFILES)
+	FLAG=DLGSETSUB(PARAMETR2,NO,INFILES)
+	FLAG=DLGSETSUB(PARAMETR2,NO1,INFILES)
+
+	STATUS=DLGMODAL(PARAMETR2)
+	RETURN
+      END SUBROUTINE  FILE_WRITE
+
+	SUBROUTINE INFILES(DLG,C_NAME,CBTYPE)
+	USE PARAM_
+	USE PARAM_1
+	USE FReciverGlobals
+
+	TYPE(DIALOG)::DLG
+	INTEGER*4  C_NAME,CBTYPE
+	I=CBTYPE
+	FLAG=DLGGET(DLG,C_NAME,STRING)
+	SELECT CASE (C_NAME)
+	CASE(NO)
+	IFL_WRITER=0		! КЛЮЧ ЗАПИСИ ФАЙЛОВ НА ДИСК (0 - ЗАПИСИ НЕТ)
+		FLAG=DLGGET(DLG,F7,STRING)
+	READ(STRING,*)N_PRINT
+		IF(N_PRINT.LT.1)N_PRINT=1
+		IF(N_PRINT.GT.50) N_PRINT=50
+		IF(N_PRINT.LE.10)THEN
+		NFONT=16;JSDVIG=25
+		END IF
+		IF(N_PRINT.LE.20.AND.N_PRINT.GT.10)THEN
+		NFONT=14;JSDVIG=20
+		END IF
+		IF(N_PRINT.LE.30.AND.N_PRINT.GT.20)THEN
+		NFONT=12;JSDVIG=15
+		END IF
+		IF(N_PRINT.LE.40.AND.N_PRINT.GT.30)THEN
+		NFONT=10;JSDVIG=12
+		END IF
+		IF(N_PRINT.LE.50.AND.N_PRINT.GT.40)THEN
+		NFONT=8;JSDVIG=10
+		END IF
+	FLAG=DLGGET(DLG,F8,STRING)
+	READ(STRING,*)img_w
+	FLAG=DLGGET(DLG,F9,STRING)
+	READ(STRING,*)img_h
+	CALL DLGEXIT(DLG)	! закрываем диалог
+	CASE(NO1)
+	STOP
+	CASE(YES)
+	IFL_WRITER=1		! КЛЮЧ ЗАПИСИ ФАЙЛОВ НА ДИСК (1 - ЗАПИСЬ ОСУЩЕСТВИТЬ)
+	FLAG=DLGGET(DLG,F1,STRING)
+	READ(STRING,*)DISK
+	FLAG=DLGGET(DLG,F2,STRING)
+	READ(STRING,*)PAPKA
+	FLAG=DLGGET(DLG,F3,STRING)
+	READ(STRING,*)FILE
+	FLAG=DLGGET(DLG,F4,STRING)
+	READ(STRING,*)FILE_TEXT
+	FLAG=DLGGET(DLG,F6,STRING)
+	READ(STRING,*)IFLAG_PRINT
+	FLAG=DLGGET(DLG,F7,STRING)
+	READ(STRING,*)N_PRINT
+		IF(N_PRINT.LT.1)N_PRINT=1
+		IF(N_PRINT.GT.50) N_PRINT=50
+		IF(N_PRINT.LE.10)THEN
+		NFONT=16;JSDVIG=25
+		END IF
+		IF(N_PRINT.LE.20.AND.N_PRINT.GT.10)THEN
+		NFONT=14;JSDVIG=20
+		END IF
+		IF(N_PRINT.LE.30.AND.N_PRINT.GT.20)THEN
+		NFONT=12;JSDVIG=15
+		END IF
+		IF(N_PRINT.LE.40.AND.N_PRINT.GT.30)THEN
+		NFONT=10;JSDVIG=12
+		END IF
+		IF(N_PRINT.LE.50.AND.N_PRINT.GT.40)THEN
+		NFONT=8;JSDVIG=10
+		END IF
+	FLAG=DLGGET(DLG,F8,STRING)
+	READ(STRING,*)img_w
+	FLAG=DLGGET(DLG,F9,STRING)
+	READ(STRING,*)img_h
+!--------------------------------------------------------------------
+	lret = make_folder(DISK,PAPKA) ! СОЗДАЕМ ПАПКУ
+!--------------------------------------------------------------------
+	NAME_FILE =TRIM(TRIM(DISK)//'/'//TRIM(PAPKA)//'/')
+
+	I_LENTH=LEN_TRIM(NAME_FILE)		!  ДЛИНА ИМЕНИ
+	NAME_FILE =TRIM(TRIM(DISK)//'/'//TRIM(PAPKA)//'/'//TRIM(FILE))
+
+	OPEN(UNIT=40,FILE=NAME_FILE ,FORM='BINARY',ERR=1,STATUS='REPLACE') ! ОТКРЫТИЕ ФАЙЛА ДАННЫХ
+	GOTO 2
+1	FLAG=DLGSET(DLG,ERROR_FILE,'Ошибка в задании файла данных')
+!	CALL PAPKA_CREATE(PAPKA) 
+	RETURN
+2	FLAG_NAME_IMG=1
+	CLOSE(40,STATUS='DELETE')	! ЗАКРЫТИЕ ФАЙЛА ДАННЫХ
+! ФАЙЛ МЫШИ -----------------------------------------------------------------
+	IFL_WRITER_TEXT=1		! КЛЮЧ ЗАПИСИ ФАЙЛОВ НА ДИСК (1 - ЗАПИСЬ ОСУЩЕСТВИТЬ)
+	FILE_TEXT=TRIM(FILE_TEXT)//'.DAT'
+	NAME_FILE_TEXT=TRIM(TRIM(DISK)//&
+     '/'//TRIM(PAPKA)//'/'//TRIM(FILE_TEXT))
+
+	OPEN(UNIT=15,FILE=NAME_FILE_TEXT,ERR=3,STATUS='REPLACE') ! ОТКРЫТИЕ ФАЙЛА ДАННЫХ
+	WRITE(15,100)
+
+	GOTO 4
+3	FLAG=DLGSET(DLG,ERROR_FILE,'Ошибка в задании файла данных')
+!	CALL PAPKA_CREATE(PAPKA_TEXT) 
+	RETURN
+4	CLOSE(15)	! ЗАКРЫТИЕ ФАЙЛА ДАННЫХ
+100	FORMAT(1X,'Номер',4X,'Километр',6x,'  Метр  ' )
+
+	CALL DLGEXIT(DLG)
+	END SELECT
+	END SUBROUTINE INFILES	
+	
+!open(unit=100, FILE='D:/My_fortran_proects_tvema/OUTPUT.OUT')
+!write(100,*)

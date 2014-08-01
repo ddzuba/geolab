@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VisualStudioProject ProjectType="typeDynamicLibrary" ProjectCreator="Intel Fortran" Keyword="Dll" Version="11.0" ProjectIdGuid="{270B9451-21BD-41F1-A126-F36C944DF8F3}">
+	<Platforms>
+		<Platform Name="Win32"/></Platforms>
+	<Configurations>
+		<Configuration Name="Debug|Win32" ConfigurationType="typeDynamicLibrary">
+				<Tool Name="VFFortranCompilerTool" SuppressStartupBanner="true" DebugInformationFormat="debugEnabled" Optimization="optimizeDisabled" WarnInterfaces="true" Traceback="true" BoundsCheck="true" RuntimeLibrary="rtMultiThreadedDebugDLL"/>
+				<Tool Name="VFLinkerTool" LinkIncremental="linkIncrementalNo" SuppressStartupBanner="true" GenerateDebugInformation="true" SubSystem="subSystemWindows" LinkDLL="true"/>
+				<Tool Name="VFResourceCompilerTool"/>
+				<Tool Name="VFMidlTool" SuppressStartupBanner="true"/>
+				<Tool Name="VFCustomBuildTool"/>
+				<Tool Name="VFPreLinkEventTool"/>
+				<Tool Name="VFPreBuildEventTool"/>
+				<Tool Name="VFPostBuildEventTool"/>
+				<Tool Name="VFManifestTool" SuppressStartupBanner="true"/></Configuration>
+		<Configuration Name="Release|Win32" ConfigurationType="typeDynamicLibrary">
+				<Tool Name="VFFortranCompilerTool" SuppressStartupBanner="true"/>
+				<Tool Name="VFLinkerTool" LinkIncremental="linkIncrementalNo" SuppressStartupBanner="true" SubSystem="subSystemWindows" LinkDLL="true"/>
+				<Tool Name="VFResourceCompilerTool"/>
+				<Tool Name="VFMidlTool" SuppressStartupBanner="true"/>
+				<Tool Name="VFCustomBuildTool"/>
+				<Tool Name="VFPreLinkEventTool"/>
+				<Tool Name="VFPreBuildEventTool"/>
+				<Tool Name="VFPostBuildEventTool"/>
+				<Tool Name="VFManifestTool" SuppressStartupBanner="true"/></Configuration></Configurations>
+	<Files>
+		<Filter Name="Header Files" Filter="fi;fd">
+		<File RelativePath=".\geolib.fi"/>
+		<File RelativePath=".\resource.fd"/></Filter>
+		<Filter Name="Resource Files" Filter="rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe">
+		<File RelativePath=".\geolib.ico"/>
+		<File RelativePath=".\geolib.rc"/></Filter>
+		<Filter Name="Source Files" Filter="f90;for;f;fpp;ftn;def;odl;idl">
+		<File RelativePath=".\Analiz.f90"/>
+		<File RelativePath=".\AviTools.f90"/>
+		<File RelativePath=".\Buffer_na_disk.f90"/>
+		<File RelativePath=".\Calc_name_koord.f90"/>
+		<File RelativePath=".\Depth.f90"/>
+		<File RelativePath=".\Dostup.f90"/>
+		<File RelativePath=".\File_Write_Csv_Second.f90"/>
+		<File RelativePath=".\File_Write_Second.f90"/>
+		<File RelativePath="..\CFReceiver\FileTimes.f90"/>
+		<File RelativePath=".\First.f90"/>
+		<File RelativePath=".\First_Read.f90"/>
+		<File RelativePath=".\First_Reading.f90"/>
+		<File RelativePath=".\Folder.f90"/>
+		<File RelativePath=".\fourie.for"/>
+		<File RelativePath=".\FReciverGlobals.f90"/>
+		<File RelativePath=".\geolib.f90"/>
+		<File RelativePath=".\GeolibGlobals.f90"/>
+		<File RelativePath=".\graphics.f90"/>
+		<File RelativePath=".\Info_xml.f90"/>
+		<File RelativePath=".\InfoDialog.f90"/>
+		<File RelativePath=".\inifile.f90"/>
+		<File RelativePath=".\iniparser.for"/>
+		<File RelativePath=".\Integral_input.f90"/>
+		<File RelativePath=".\Lagrang.for"/>
+		<File RelativePath=".\Level.f90"/>
+		<File RelativePath=".\logger.f90"/>
+		<File RelativePath=".\Magnificftion.f90"/>
+		<File RelativePath=".\Main_Line.f90"/>
+		<File RelativePath=".\MainWnd.f90"/>
+		<File RelativePath=".\Midl_uglub.f90"/>
+		<File RelativePath=".\Midle_data.f90"/>
+		<File RelativePath=".\MouseClick.f90"/>
+		<File RelativePath=".\Multiple_reflection.f90"/>
+		<File RelativePath=".\Norm.f90"/>
+		<File RelativePath=".\Papka.f90"/>
+		<File RelativePath=".\Point_array.f90"/>
+		<File RelativePath=".\Print_csv.f90"/>
+		<File RelativePath=".\PrintBitmap.f90"/>
+		<File RelativePath=".\ReadConfigFromIni.f90"/>
+		<File RelativePath=".\Refr_Forprint.f90"/>
+		<File RelativePath=".\Refr_posibility.f90"/>
+		<File RelativePath=".\Rewrite_files.f90"/>
+		<File RelativePath=".\Rmax.f90"/>
+		<File RelativePath=".\Rmax_Plus.f90"/>
+		<File RelativePath=".\SaveBitmap.f90"/>
+		<File RelativePath=".\Second_reading.f90"/>
+		<File RelativePath=".\Sqdr.f90"/>
+		<File RelativePath=".\Stop_Dll.f90"/>
+		<File RelativePath=".\Sum_moment.f90"/>
+		<File RelativePath=".\utf8.f90"/></Filter>
+		<File RelativePath=".\ReadMe.txt"/></Files>
+	<Globals/></VisualStudioProject>

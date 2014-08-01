@@ -1,0 +1,30 @@
+!
+! ЧТЕНИЕ МАШИННОГО ВРЕМЕНИ ЗАПИСИ ТРАСС В ФОРМЕ .GPR
+!
+    SUBROUTINE TIME_TRASSA()		 ! ДЛЯ ФОРМАТА GPR
+	USE DFLIB
+	USE INPUT_RADAROGRAMMA 
+	USE KOORDINATA   
+
+	IMPLICIT NONE
+
+    INTEGER*4 K,L  
+    REAL*8 AAA,AAA1
+    
+    K=0
+    DO  L=1,NTR
+    K=K+NCHANAL_GEO    
+    AAA=IZAGTR(K,1)
+    IF(AAA.LT.0.D0)AAA=AAA+2147483647+2147483647+2
+    AAA1=IZAGTR(K,2)
+    IF(AAA1.LT.0.D0)AAA1=AAA1+2147483647+2147483647+2
+    AAA1=AAA1*2147483647*2+2*AAA1+AAA          
+	VREMYA_TRASSA(L)=AAA1/10000000	
+    END DO
+	RETURN
+    END
+!
+! отсчет от 12:00 утра 1 января 1601 года
+!
+!open(unit=100, FILE='c:/1/OUTPUT.OUT')
+!write(100,*)ii,IZAGTR(II,3)

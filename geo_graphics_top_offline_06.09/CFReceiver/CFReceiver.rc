@@ -1,0 +1,279 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "winres.h"
+#include "winver.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Нейтральный resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEU)
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+#pragma code_page(1251)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+Dialog1 DIALOGEX 22, 17, 292, 166
+STYLE DS_SETFONT | DS_MODALFRAME | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Main Menu"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    PUSHBUTTON      "Button1",IDC_BUTTON1,237,7,50,14
+    CONTROL         "Режим 1",CHECK1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,244,52,45,10
+    DEFPUSHBUTTON   "Выход без расчетов",NO,219,2,73,27
+    CONTROL         "Режим 2",CHECK2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,244,94,45,10
+    CONTROL         "Режим 3",CHECK3,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,246,139,45,10
+    LTEXT           "Обработка георадиолокационной информации",IDC_STATIC,0,50,205,11
+    LTEXT           "Привязка к меткам километровых столбов на радарограмме. Обработка георадиолокационной информации",IDC_STATIC,0,90,214,15
+    LTEXT           "Привязка георадиолокационной информации к осям искусственных сооружений и пикетным/километровым столбам с использованием спутниковых технологий и электронной карты пути. Обработка георадиолокационной информации.",IDC_STATIC,0,122,227,36
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    Dialog1, DIALOG
+    BEGIN
+        VERTGUIDE, 24
+        BOTTOMMARGIN, 158
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // Нейтральный resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Русский (Россия) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)
+LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+#pragma code_page(1251)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+Dialog2 DIALOGEX 0, 0, 316, 124
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Пробелы в названиях не допустимы"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Да",YES,224,81,85,31
+    PUSHBUTTON      "Выход без расчетов",NO,7,81,81,31
+    LTEXT           "Номер устройства",IDC_STATIC,7,7,66,13
+    EDITTEXT        DEVICE,188,7,121,12,ES_AUTOHSCROLL
+    LTEXT           "Направление",IDC_STATIC,7,45,57,11
+    LTEXT           "Дорога",IDC_STATIC,7,25,66,12
+    LTEXT           "Путь",IDC_STATIC,7,65,30,12
+    EDITTEXT        DIRECTION,188,44,121,12,ES_AUTOHSCROLL
+    EDITTEXT        VAY,188,26,121,12,ES_AUTOHSCROLL
+    EDITTEXT        TRACK,188,65,121,12,ES_AUTOHSCROLL
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    Dialog2, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 309
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 112
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // Русский (Россия) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Английский (США) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+CFRECEIVER              ICON                    "CFReceiver.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+CFRECEIVER MENU
+BEGIN
+    MENUITEM "Start",                       IDM_START
+    POPUP "Redactor"
+    BEGIN
+        MENUITEM "Repair File.log",             ID_REDACTOR_LOG
+        MENUITEM "Create File.txt",             ID_CREATE_TXT
+        MENUITEM "Repair File.txt",             ID_REDACTOR_TXT
+        MENUITEM "Edit Ini-file",               ID_Edit_Ini
+        MENUITEM "Edit Cfg-file",               30053
+        MENUITEM "Reset The Ini-file Revision", ID_Reset_Ini
+        MENUITEM "Reset The Cgh-file Revision", ID_Reset_Cfg
+        MENUITEM "Send1",                       ID_REDACTOR_SEND1
+        MENUITEM "Send100 ",                    ID_REDACTOR_SEND100
+        MENUITEM "Instruction",                 ID_INSRUCTION
+    END
+    POPUP "GeoScan32"
+    BEGIN
+        MENUITEM "Length of the track",           ID_GEOSCAN32_Mode1
+        MENUITEM "Global Coordinates",           ID_GEOSCAN32_Mode2
+        MENUITEM "Railway Coordinates",          ID_GEOSCAN32_Mode3
+    END
+    MENUITEM "Stop",                        ID_STOP
+    MENUITEM "Finish",                      IDM_FINISH
+    POPUP "Main Window"
+    BEGIN
+        MENUITEM "Show",                        ID_MAINWINDOW_SHOW
+        MENUITEM "Hide",                        ID_MAINWINDOW_HIDE
+    END
+    POPUP "Header"
+    BEGIN
+        MENUITEM "Increase Road Number",        ID_HEADER_INCREASEROADNUMBER
+        MENUITEM "Decrease Road Number",        ID_HEADER_DECREASEROADNUMBER
+    END
+    POPUP "&File"
+    BEGIN
+        MENUITEM "E&xit",                       IDM_EXIT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+CFRECEIVER ACCELERATORS
+BEGIN
+    VK_F1,          IDM_HELPCONTENTS,       VIRTKEY 
+    "?",            IDM_ABOUT,              ASCII,  ALT
+    "/",            IDM_ABOUT,              ASCII,  ALT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,0
+ PRODUCTVERSION 1,0,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904E4"
+        BEGIN
+            VALUE "CompanyName", "My Company"
+            VALUE "FileDescription", "CFReceiver Application"
+            VALUE "FileVersion", "1.0"
+            VALUE "InternalName", "CFReceiver"
+            VALUE "ProductName", "CFReceiver"
+            VALUE "ProductVersion", "1.0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""winres.h""\r\n"
+    "#include ""winver.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    0                       " "
+END
+
+#endif    // Английский (США) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

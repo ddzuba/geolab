@@ -1,0 +1,24 @@
+SUBROUTINE OTN_RASST()                		! нопедекемхе пюяярнъмхъ нрмняхрекэмн 
+                           					! оепбни рпюяяш
+USE DFLIB
+USE KOORDINATA
+USE GEOSKANGLOBALS
+USE INPUT_RADAROGRAMMA 
+
+IMPLICIT NONE
+INTEGER(4) I 
+! нопедекъел нрмняхрекэмше пюяярнъмхъ
+R_TRASSA(1)=0.D0
+DO I=2,NTR
+R_TRASSA(I)=RABZEM*2.D0*DASIN(DSQRT(DSIND((SHIROTA_TRASSA(I)-SHIROTA_TRASSA(I-1))/2)**2&
++DCOSD(SHIROTA_TRASSA(I))*DCOSD(SHIROTA_TRASSA(I-1))&
+*DSIND((DOLGOTA_TRASSA(I)-DOLGOTA_TRASSA(I-1))/2)**2))
+END DO
+RETURN
+END
+   
+
+!open(unit=106, FILE='D:/OTN_RASST.OUT')
+!write(106,*)R_TRASSA
+!write(106,*)SHIROTA_TRASSA
+!write(106,*)DOLGOTA_TRASSA

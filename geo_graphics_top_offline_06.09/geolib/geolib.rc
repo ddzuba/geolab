@@ -1,0 +1,395 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "winres.h"
+#include "winver.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Russian (Russia) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)
+LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+#pragma code_page(1251)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    MAIN_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 487
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 399
+    END
+
+    IDD_CONSOLE_PAGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 337
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 315
+    END
+
+    FILES_BMP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 271
+        BOTTOMMARGIN, 202
+    END
+
+    FILE_MOUSE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 339
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 120
+    END
+
+    FILE_CSV, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 255
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 184
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+FRECIVER MENU
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "E&xit",                       IDM_EXIT
+    END
+    POPUP "Вид"
+    BEGIN
+        MENUITEM "Информация",                  IDM_CONSOLE
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+MAIN_DIALOG DIALOGEX 0, 0, 494, 405
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION 
+"Информация об обследуемом участке, аппаратуре и режиме визуализации результатов"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LTEXT           "Центральная частота излучения антенного блока",IDC_STATIC,7,7,208,10
+    EDITTEXT        A1,227,7,59,15,ES_AUTOHSCROLL | WS_DISABLED
+    LTEXT           "Уравень выравнивания радарограммы в окне (в интервале 5-200)",IDC_STATIC,7,94,160,19
+    LTEXT           "Уравень отсечения белого шума",IDC_STATIC,247,95,122,11
+    LTEXT           "Уровень поиска главного максимума",IDC_STATIC,7,113,135,14
+    LTEXT           "Вертикальный размер окна выдачи радарограммы",IDC_STATIC,7,353,150,22
+    EDITTEXT        A2,179,92,59,14,ES_AUTOHSCROLL | WS_DISABLED
+    EDITTEXT        A3,428,91,59,16,ES_AUTOHSCROLL | WS_DISABLED
+    EDITTEXT        A4,178,108,61,16,ES_AUTOHSCROLL | WS_DISABLED
+    EDITTEXT        A5,426,110,61,16,ES_AUTOHSCROLL | WS_DISABLED
+    LTEXT           "-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------",IDC_STATIC,7,85,480,8
+    LTEXT           "-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------",IDC_STATIC,7,162,480,8
+    LTEXT           "Высота подъема антенного блока, см",IDC_STATIC,245,134,137,10
+    LTEXT           "Число трасс для усреднения",IDC_STATIC,349,169,73,16
+    LTEXT           "Число точек усреднения вдоль трассы",IDC_STATIC,7,168,87,20
+    EDITTEXT        A7,103,170,61,16,ES_AUTOHSCROLL | WS_DISABLED
+    EDITTEXT        A8,435,171,44,16,ES_AUTOHSCROLL | WS_DISABLED
+    DEFPUSHBUTTON   "Подтверждение выбора задачи",YES,297,7,83,58,BS_MULTILINE
+    DEFPUSHBUTTON   "Прервать работу",NO,403,7,84,58,BS_MULTILINE
+    EDITTEXT        A11,180,141,61,16,ES_AUTOHSCROLL
+    LTEXT           "Диэлектрическая проницаемость",IDC_STATIC,7,145,120,10
+    LTEXT           "Число трасс для определения однородности слоя",IDC_STATIC,171,170,108,17
+    EDITTEXT        A13,281,170,61,16,ES_AUTOHSCROLL | WS_DISABLED
+    EDITTEXT        A12,426,129,61,16,ES_AUTOHSCROLL
+    EDITTEXT        A16,47,66,59,14,ES_AUTOHSCROLL
+    LTEXT           "Число каналов",IDC_STATIC,7,66,29,19
+    LTEXT           "Время развертки",IDC_STATIC,7,128,64,10
+    LTEXT           "Код направления",IDC_STATIC,120,54,56,17
+    LTEXT           "Номер дороги",IDC_STATIC,119,42,50,13
+    LTEXT           "Номер пути",IDC_STATIC,122,73,51,12
+    EDITTEXT        A17,179,39,109,12,ES_AUTOHSCROLL | WS_DISABLED
+    EDITTEXT        A18,179,55,108,12,ES_AUTOHSCROLL | WS_DISABLED
+    EDITTEXT        A19,180,74,106,12,ES_AUTOHSCROLL | WS_DISABLED
+    EDITTEXT        A20,180,126,59,14,ES_AUTOHSCROLL
+    EDITTEXT        A21,178,22,109,13,ES_AUTOHSCROLL | WS_DISABLED
+    LTEXT           "Номер комплекса",IDC_STATIC,119,24,53,17
+    LTEXT           "Признак редактирования названия папок",IDC_STATIC,7,35,64,23
+    CONTROL         "",CHECK0,"Button",BS_AUTOCHECKBOX,82,44,9,10
+    EDITTEXT        A22,426,149,61,16,ES_AUTOHSCROLL
+    LTEXT           "Число бит передачи данных (2 или 4)",IDC_STATIC,251,153,165,11
+    LTEXT           "-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------",IDC_STATIC,7,185,480,8
+    EDITTEXT        A24,139,193,61,16,ES_AUTOHSCROLL | WS_DISABLED
+    EDITTEXT        A25,139,210,61,16,ES_AUTOHSCROLL | WS_DISABLED
+    EDITTEXT        A26,139,226,61,16,ES_AUTOHSCROLL | WS_DISABLED
+    EDITTEXT        A27,280,225,61,16,ES_AUTOHSCROLL
+    EDITTEXT        A28,281,193,61,16,ES_AUTOHSCROLL
+    EDITTEXT        A29,419,193,61,16,ES_AUTOHSCROLL
+    EDITTEXT        A30,281,209,61,16,ES_AUTOHSCROLL
+    EDITTEXT        A31,420,218,61,16,ES_AUTOHSCROLL
+    LTEXT           "Наклон",IDC_STATIC,207,197,54,8
+    LTEXT           "Влажность",IDC_STATIC,207,231,45,11
+    LTEXT           "Слоистость",IDC_STATIC,351,197,43,14
+    LTEXT           "Деформативность",IDC_STATIC,206,213,65,10
+    LTEXT           "Балластные углубления",IDC_STATIC,349,217,50,17
+    LTEXT           "Число трасс в скользящем окне",IDC_STATIC,7,232,122,10
+    LTEXT           "Нижняя граница скользящего окна, 1.5 м",IDC_STATIC,7,212,122,18
+    LTEXT           "Верхняя граница скользящего окна, 0.75 м",IDC_STATIC,7,193,125,17
+    LTEXT           "------------------------------------------------------------------------------------------------------------------------------------------------------------------------------",IDC_STATIC,7,242,480,8,0,WS_EX_DLGMODALFRAME | WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    LTEXT           "Диск",IDC_STATIC,7,265,24,15
+    EDITTEXT        A32,31,263,34,16,ES_AUTOHSCROLL
+    LTEXT           "Папка",IDC_STATIC,7,285,25,13
+    EDITTEXT        A33,45,282,193,16,ES_AUTOHSCROLL | WS_DISABLED
+    LTEXT           "Файл  мыши",IDC_STATIC,100,267,47,10
+    EDITTEXT        A34,155,264,82,16,ES_AUTOHSCROLL
+    LTEXT           "Признак печати  не равен нолю",IDC_STATIC,7,302,115,15
+    EDITTEXT        A35,173,299,63,16,ES_AUTOHSCROLL
+    EDITTEXT        A36,173,316,63,16,ES_AUTOHSCROLL
+    EDITTEXT        A37,173,334,63,16,ES_AUTOHSCROLL
+    EDITTEXT        A38,173,353,63,16,ES_AUTOHSCROLL
+    LTEXT           "Шаг отображения трасс радарограммы в окне монитора ",IDC_STATIC,7,315,138,17
+    LTEXT           "Горизонтальный размер окна выдачи радарограммы, в трассах ",IDC_STATIC,7,332,144,17
+    LTEXT           "Порог отсечения низких частот при входной фильтрации (отсчитывается в долях частоты главного максимума)",IDC_STATIC,247,109,133,18
+    DEFPUSHBUTTON   "Error text",ERROR_FILE,7,380,480,18,BS_NOTIFY | BS_FLAT | WS_GROUP | NOT WS_TABSTOP
+    CTEXT           "",IDC_STATIC,239,247,8,128,0,WS_EX_DLGMODALFRAME | WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    LTEXT           "Папка",IDC_STATIC,249,266,25,13
+    EDITTEXT        A39,307,263,180,16,ES_AUTOHSCROLL | WS_DISABLED
+    LTEXT           "Шаг выдачи информации в текстовые файлы",IDC_STATIC,248,282,96,15
+    EDITTEXT        A40,347,281,57,16,ES_AUTOHSCROLL
+    LTEXT           "Глубины слоев",IDC_STATIC,249,303,82,10
+    LTEXT           "Повышенная влажность верхней части разреза",IDC_STATIC,249,315,94,19
+    LTEXT           "Балластные углубления",IDC_STATIC,248,334,92,14
+    LTEXT           "Информационный файл",IDC_STATIC,247,348,92,9
+    EDITTEXT        A41,430,298,57,16,ES_AUTOHSCROLL
+    EDITTEXT        A42,430,314,57,16,ES_AUTOHSCROLL
+    EDITTEXT        A43,430,330,57,16,ES_AUTOHSCROLL
+    EDITTEXT        A44,430,346,57,16,ES_AUTOHSCROLL
+    CONTROL         "",CHECK1,"Button",BS_AUTOCHECKBOX,85,252,9,10
+    CONTROL         "",CHECK2,"Button",BS_AUTOCHECKBOX,383,252,9,10
+    LTEXT           "Рисунки сохранять",IDC_STATIC,7,253,76,11
+    LTEXT           "Текстовые файлы сохранять",IDC_STATIC,250,251,122,11
+    CONTROL         "",CHECK3,"Button",BS_AUTOCHECKBOX,434,71,9,10
+    LTEXT           "Подготовить файл начальных данных",IDC_STATIC,297,68,122,19
+END
+
+IDD_CONSOLE_PAGE DIALOG 0, 0, 344, 322
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,287,301,50,14
+    EDITTEXT        IDC_EDIT_INFO,7,7,330,290,ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL | WS_VSCROLL
+END
+
+FILES_BMP DIALOG 0, 0, 278, 210
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Путь к файлу записи изображения и печати"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "Да",YES,221,0,50,23
+    DEFPUSHBUTTON   "Запись не производить",NO,221,25,50,26,BS_MULTILINE
+    LTEXT           "Диск",IDC_STATIC,7,7,24,15
+    LTEXT           "Папка",IDC_STATIC,7,30,25,13
+    LTEXT           "Родовае имя файла изображения",IDC_STATIC,7,82,69,17
+    EDITTEXT        F1,52,6,73,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        F2,39,31,177,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        F3,153,84,118,14,ES_CENTER | ES_AUTOHSCROLL | WS_DISABLED
+    DEFPUSHBUTTON   "Error text",ERROR_FILE,7,184,264,18,BS_NOTIFY | BS_FLAT | WS_GROUP | NOT WS_TABSTOP
+    EDITTEXT        F6,239,103,32,14,ES_CENTER | ES_AUTOHSCROLL
+    LTEXT           "Признак печати  не равен нолю",IDC_STATIC,7,103,115,15
+    DEFPUSHBUTTON   "Выход без расчетов",NO1,221,54,50,23,BS_MULTILINE
+    LTEXT           "Шаг отображения трасс радарограммы в окне монитора ",IDC_STATIC,7,119,202,14
+    LTEXT           "Горизонтальный размер окна выдачи радарограммы, в трассах ",IDC_STATIC,7,134,226,15
+    LTEXT           "Вертикальный размер окна выдачи радарограммы, в точках трассы",IDC_STATIC,7,150,180,18
+    EDITTEXT        F7,239,119,32,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        F8,239,135,32,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        F9,239,151,32,14,ES_CENTER | ES_AUTOHSCROLL
+    LTEXT           "Имя текстового файла положения мыши",IDC_STATIC,7,51,78,19
+    EDITTEXT        F4,108,55,106,14,ES_CENTER | ES_AUTOHSCROLL
+END
+
+FILE_MOUSE DIALOG 0, 0, 346, 127
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Файл записи положения мыши"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "Да",YES,289,7,50,34
+    PUSHBUTTON      "Запись не производить",NO,289,46,50,31,BS_MULTILINE
+    EDITTEXT        GG1,91,14,73,14,ES_AUTOHSCROLL
+    EDITTEXT        GG2,63,46,215,14,ES_AUTOHSCROLL
+    EDITTEXT        GG3,219,81,120,14,ES_AUTOHSCROLL
+    LTEXT           "Диск",IDC_STATIC,7,14,24,15
+    LTEXT           "Папка",IDC_STATIC,7,48,25,13
+    LTEXT           "Имя текстового файла положения мыши",IDC_STATIC,7,77,78,19
+    DEFPUSHBUTTON   "Error text",ERROR_FILE1,7,102,332,18,BS_NOTIFY | BS_FLAT | WS_GROUP | NOT WS_TABSTOP
+END
+
+FILE_CSV DIALOG 0, 0, 262, 191
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Путь к текстовому файлу записи"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "Да",YES,205,7,50,21
+    DEFPUSHBUTTON   "Запись не производить",NO,205,30,50,20,BS_MULTILINE
+    DEFPUSHBUTTON   "Выход без расчетов",NO1,205,55,50,23,BS_MULTILINE
+    LTEXT           "Диск",IDC_STATIC,7,7,24,15
+    LTEXT           "Папка",IDC_STATIC,7,28,25,13
+    DEFPUSHBUTTON   "Error text",ERROR_FILE,7,166,248,18,BS_NOTIFY | BS_FLAT | WS_GROUP | NOT WS_TABSTOP
+    EDITTEXT        F1,49,7,73,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        F2,36,27,160,14,ES_CENTER | ES_AUTOHSCROLL
+    LTEXT           "Шаг выдачи информации в текстовые файлы",IDC_STATIC,7,49,96,15
+    EDITTEXT        F3,145,49,49,14,ES_CENTER | ES_AUTOHSCROLL
+    CTEXT           "Формируемые протоколы",IDC_STATIC,7,82,248,12,WS_BORDER
+    LTEXT           "Глубины слоев",IDC_STATIC,7,100,82,15
+    EDITTEXT        F6,178,98,77,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        F7,178,114,77,14,ES_CENTER | ES_AUTOHSCROLL
+    LTEXT           "Повышенная влажность верхней части разреза",IDC_STATIC,7,113,94,19
+    LTEXT           "Балластные углубления",IDC_STATIC,7,135,92,14
+    EDITTEXT        F8,178,131,77,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        F10,178,150,77,14,ES_CENTER | ES_AUTOHSCROLL
+    LTEXT           "Информационный файл",IDC_STATIC,7,150,92,9
+END
+
+#endif    // Russian (Russia) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United States) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+FRECIVER ACCELERATORS
+BEGIN
+    VK_F1,          IDM_HELPCONTENTS,       VIRTKEY 
+    "?",            IDM_ABOUT,              ASCII,  ALT
+    "/",            IDM_ABOUT,              ASCII,  ALT
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""winres.h""\r\n"
+    "#include ""winver.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+FRECIVER                ICON                    "geolib.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,0
+ PRODUCTVERSION 1,0,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904E4"
+        BEGIN
+            VALUE "CompanyName", "My Company"
+            VALUE "FileDescription", "FReciver Application"
+            VALUE "FileVersion", "1.0"
+            VALUE "InternalName", "FReciver"
+            VALUE "ProductName", "FReciver"
+            VALUE "ProductVersion", "1.0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    0                       " "
+END
+
+#endif    // English (United States) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
